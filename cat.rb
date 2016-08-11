@@ -14,8 +14,10 @@ class Cat
        	(@meal_time - 12).to_s + " PM"
        else
        	 return "12 PM"
-       end
-      
+       end      
+	end
+	def meow
+		"My name is #{@name} and I #{@preferred_food} at #{eats_at}"
 	end
 end
 
@@ -25,5 +27,11 @@ bombay = Cat.new("Stella","meat", 12)
 
 puts "bengal"
 puts bengal.eats_at
+puts bengal.meow
+p
 puts "bombay"
 puts bombay.eats_at
+puts bombay.meow
+
+
+
