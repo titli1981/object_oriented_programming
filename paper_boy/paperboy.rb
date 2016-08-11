@@ -1,9 +1,9 @@
 class Paperboy
-  def initialize(name, experience, side)
+  def initialize(name, experience, side, earnings)
     @name = name
     @experience = experience
     @side = side
-    @earnings = 0
+    @earnings = earnings
   end
 
   def quota
@@ -29,9 +29,11 @@ class Paperboy
    @earnings += minimum_amount
   end
   end
+def report
+  " I am #{@name}, I have delivered #{@experience} papers and I have earned #{@earnings} so far!"
 end
-
-tommy = Paperboy.new("Tommy",34,"even")
+end
+tommy = Paperboy.new("Tommy",12,"odd",61)
 puts tommy.quota
-
-puts tommy.deliver(102,345)
+puts tommy.deliver(5,7)
+puts tommy.report
